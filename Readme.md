@@ -63,12 +63,16 @@ This is a simple web-based Library Management System built with ASP.NET Core MVC
 ### Views
 - **Authors**:
   - `AuthorCreate.cshtml`: Form for adding a new author.
-  - `AuthorUpdate.cshtml`: Form for updating author details.
-  - `AuthorDelete.cshtml`: Confirmation page for deleting an author.
+  - `Update.cshtml`: Form for updating author details.
+  - `DeleteCheck.cshtml`: Confirmation page for deleting an author.
+  - `Index.cshtml`: The screen where we list authors.
+  
 - **Books**:
   - `BookCreate.cshtml`: Form for adding a new book.
-  - `BookUpdate.cshtml`: Form for updating book details.
-  - `BookDelete.cshtml`: Confirmation page for deleting a book.
+  - `Update.cshtml`: Form for updating book details.
+  - `DeleteCheck.cshtml`: Confirmation page for deleting a book.
+  - `Index.cshtml`: The screen where we list books.
+
 - **Shared**:
   - `Layout.cshtml`: Main layout for consistent design across pages.
 
