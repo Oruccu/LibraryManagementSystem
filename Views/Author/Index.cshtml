@@ -1,0 +1,59 @@
+@model List<AuthorViewModel>
+<div class="row">
+  <div class="col">
+    <h1>Yazar Listesi</h1>
+  </div>
+  <div class="col text-end">
+    <a asp-action="AuthorCreate" asp-controller="Author">
+      <i class="bi bi-person-plus" style="color:#C96868; font-size: 2.5rem; "></i>
+    </a>
+  </div>
+</div>
+@if (TempData["ErrorMessage"] != null)
+{
+  <div class="alert alert-danger">
+  @TempData["ErrorMessage"]
+</div>
+}
+<div class="row">
+  <div class="col">
+
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Ad</th>
+          <th>Soyad</th>
+          <th>Doğum Tarihi</th>
+          <th>Kitap Sayısı</th>
+          <th>İşlemler</th>
+        </tr>
+      </thead>
+      <tbody>
+        @foreach (AuthorViewModel author in Model)
+        {
+          <tr>
+            <td>@author.Id</td>
+            <td>@author.FirstName</td>
+            <td>@author.LastName</td>
+            <td>@author.DateOfBirth.ToShortDateString()</td>
+            <td>@author.BookCount</td>
+            <td>
+              <a asp-action="Update" asp-route-id="@author.Id" data-bs-target="#exampleModal">
+                <i class="bi bi-pencil-fill" style="color:gray; font-size: 1.5rem; "></i>
+              </a>
+
+              <a asp-action="DeleteCheck" asp-route-id="@author.Id">
+                <i class="bi bi-trash" style="color:#C96868; font-size: 1.5rem; "></i>
+              </a>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+  <div class="col">
+    <img src="~/assets/authorindex.png" class="img-fluid" style="max-width: 100%; height: auto;" alt="Kütüphane İkonu">
+  </div>
+</div>

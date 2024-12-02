@@ -1,0 +1,48 @@
+@model AuthorUpdateViewModel
+
+@{
+    ViewBag.Title = "Author Update";
+}
+
+<h1>Yazarı Düzenle</h1>
+<div class="row">
+    <div class="col-md-6">
+
+
+
+        <form method="post">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <div class="form-text text-danger">
+                    <span asp-validation-for="Name"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="LastName" class="form-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <div class="form-text text-danger">
+                    <span asp-validation-for="LastName"></span>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="DateOfBirth" class="form-label"></label>
+                <input asp-for="DateOfBirth" type="date" class="form-control" />
+                <div class="form-text text-danger">
+                    <span asp-validation-for="DateOfBirth"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn"
+                style="width: 100px; background-color: #c97c66; color: aliceblue ;">Güncelle</button>
+            <a class="btn btn-secondary" asp-action="Index">Vazgeç</a>
+        </form>
+    </div>
+    <div class="col-md-6 text-center">
+        <img src="~/assets/author.png" style="width: 500px; height: auto;" alt="Kütüphane İkonu">
+    </div>
+</div>

@@ -1,0 +1,22 @@
+@model Book
+
+@{
+    ViewBag.Title = "Silme Onayı";
+}
+
+<h1>Silme Onayı</h1>
+<div class="row">
+    <div class="col">
+        <form asp-action="Delete" asp-route-id="@Model.Id" method="post">
+            <input type="hidden" asp-for="Id" />
+            <p>&quot;@Model.Title&quot; adlı kitabı silmek istediğinize emin misiniz?</p>
+            <div class="mt-3">
+                <button type="submit" class="btn" style="background-color: #c97c66; color: aliceblue;">Kaydet</button>
+                <a asp-action="Index" class="btn btn-secondary">Vazgeç</a>
+            </div>
+        </form>
+    </div>
+    <div class="col">
+        <img src="~/assets/deletet.png" class="img-fluid" style="max-width: 100%; height: auto;" alt="Kütüphane İkonu">
+    </div>
+</div>

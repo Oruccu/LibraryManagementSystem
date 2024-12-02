@@ -1,0 +1,47 @@
+@model LibraryManagementSystem.Models.LibraryViewModel
+<div class="row align-items-center mb-3">
+    <div class="col">
+        <h1>Kitap Listesi</h1>
+    </div>
+    <div class="col text-end ">
+
+            <div class="col">
+                <a asp-controller="Library" asp-action="AuthorCreate">
+                   <i class="bi bi-person-fill-add"
+              style="color:gray; font-size: 2.5rem; "></i>
+                </a>
+                <a asp-controller="Library" asp-action="BookCreate">
+                    <i class="bi bi-bookmark-heart" style="color:#C96868; font-size: 2.5rem; "></i>
+                </a>
+            </div>
+    </div>
+</div>
+<div class="row g-4">
+    @foreach (var book in Model.Books)
+    {
+        var author = Model.Authors.FirstOrDefault(a => a.Id == book.AuthorId);
+        <div class="col-4">
+            <div class="p-3 border rounded ">
+                <h2 class="book-title">@book.Title</h2>
+                <p class="book-genre">@book.Genre</p>
+                <p><strong>Author:</strong> @(author != null ? $"{author.FirstName} {author.LastName}" : "Bilinmiyor")
+                </p>
+                <p><strong>Published:</strong> @book.PublishDate.ToShortDateString()</p>
+                <p><strong>ISBN:</strong> @book.ISBN</p>
+
+                <p><strong>Copies Available:</strong> @book.CopiesAvailable</p>
+                <div class="row justify-content-end align-items-center">
+                    <div class="col-auto d-flex align-items-center gap-3">
+                        <a asp-action="Update" asp-route-id="@book.Id">
+                            <i class="bi bi-bookmark-heart-fill" style="color:#7EACB5; font-size: 2rem;"></i>
+                        </a>
+                        <a asp-action="DeleteCheck" asp-route-id="@book.Id">
+                            <i class="bi bi-trash-fill" style="color:#C96868; font-size: 2rem; "></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+</div>

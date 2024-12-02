@@ -1,0 +1,47 @@
+﻿@model IEnumerable<LibraryManagementSystem.Models.Quote>
+
+@{
+    ViewData["Title"] = "Home";
+}
+<div class="text-center my-4">
+    <h1>Kütüphane Kayıt Sistemi</h1>
+    <p>Kütühaneye Kitap kayıt etmek için Library sayfasını ziyaret edebilirsiniz.</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <!-- Carousel -->
+        <div class="col-md-8 d-flex align-items-center  " >
+            <div id="carouselExampleSlidesOnly" class="carousel slide w-100" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    @foreach (var quote in Model)
+                    {
+                        <div class="carousel-item @(quote.Id == 1 ? "active" : "")">
+                            <div class="d-flex justify-content-center align-items-center" style="min-height: 200px;">
+                                <p class="text-center">@quote.Text</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <!-- Previous and Next buttons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleSlidesOnly" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Image -->
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+            <img src="~/assets/librarynew.png" class="img-fluid" style="max-width: 100%; height: auto;" alt="Kütüphane İkonu">
+        </div>
+    </div>
+</div>
+
+
+
+

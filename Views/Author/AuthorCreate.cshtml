@@ -1,0 +1,44 @@
+@model LibraryManagementSystem.Models.NewAuthor
+
+@{
+    ViewBag.Title = "Yeni Yazar";
+}
+<h1>Yeni Yazar Ekle</h1>
+<div class="row">
+    <div class="col">
+        <form method="post">
+            <div class="p-3">
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-control"></label>
+                    <input asp-for="Name" class="form-control">
+                    <div class="form-text text-danger">
+                        <span asp-validation-for="Name"></span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="LastName" class="form-control"></label>
+                    <input asp-for="LastName" class="form-control">
+                    <div class="form-text text-danger">
+                        <span asp-validation-for="LastName"></span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="DateOfBirth" class="form-control"></label>
+                    <input asp-for="DateOfBirth" class="form-control">
+                    <div class="form-text text-danger">
+                        <span asp-validation-for="DateOfBirth"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="p-3 d-flex gap-2">
+                <button type="submit" class="btn"
+                    style="width: 150px; background-color: #c97c66; color: aliceblue ;">Kaydet</button>
+                <a class="btn btn-secondary btn-lg d-flex align-items-center justify-content-center"
+                    style="width: 150px;" asp-action="Index">Vazgeç</a>
+            </div>
+        </form>
+    </div>
+    <div class="col">
+        <img src="~/assets/author.png" class="img-fluid" style="max-width: 100%; height: auto;" alt="Kütüphane İkonu">
+    </div>
+</div>

@@ -1,0 +1,62 @@
+@model BookUpdateViewModal
+
+@{
+    ViewBag.Title = "Update";
+}
+<h1> Kitabı Düzenle</h1>
+<div class="row justify-content-center align-items-center" >
+    <div class="col-md-8 text-center">
+        <form method="post">
+            <div class="mb-3">
+                <label asp-for="Title" class="form-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <!-- Yazar Seçimi -->
+            <div class="mb-3">
+                <label asp-for="AuthorId" class="form-label"></label>
+                <select asp-for="AuthorId" asp-items="ViewBag.Authors" class="form-select">
+                    <option value="">Seçiniz</option>
+                </select>
+                <span asp-validation-for="AuthorId" class="text-danger"></span>
+            </div>
+            <!-- Tür -->
+            <div class="mb-3">
+                <label asp-for="Genre" class="form-label"></label>
+                <input asp-for="Genre" class="form-control" />
+                <span asp-validation-for="Genre" class="text-danger"></span>
+            </div>
+
+            <!-- Yayın Tarihi -->
+            <div class="mb-3">
+                <label asp-for="PublishDate" class="form-label"></label>
+                <input asp-for="PublishDate" class="form-control" type="date" />
+                <span asp-validation-for="PublishDate" class="text-danger"></span>
+            </div>
+
+            <!-- ISBN -->
+            <div class="mb-3">
+                <label asp-for="ISBN" class="form-label"></label>
+                <input asp-for="ISBN" class="form-control" />
+                <span asp-validation-for="ISBN" class="text-danger"></span>
+            </div>
+            <!-- Kopya Sayısı -->
+            <div class="mb-3">
+                <label asp-for="CopiesAvailable" class="form-label"></label>
+                <input asp-for="CopiesAvailable" class="form-control" type="number" />
+                <span asp-validation-for="CopiesAvailable" class="text-danger"></span>
+            </div>
+
+            <!-- Kaydet ve Vazgeç Butonları -->
+            <div class="mt-3">
+                <button type="submit" class="btn" style="background-color: #c97c66; color: aliceblue;">Kaydet</button>
+                <a asp-action="Index" class="btn btn-secondary">Vazgeç</a>
+            </div>
+
+        </form>
+    </div>
+    <div class="col-md-4 text-center ">
+        <img src="~/assets/author.png" style="width: 500px; height: auto;" alt="Kütüphane İkonu">
+    </div>
+</div>

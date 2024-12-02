@@ -1,0 +1,33 @@
+/* styles.css */
+
+/* Her bir kitap kartının tasarımı */
+.book-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #257180;
+    /* Başlık rengi */
+}
+
+.book-genre {
+    font-style: italic;
+    color: #555;
+    /* Tür rengi */
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Kartların satır içinde taşması durumunda yeni satıra geçmesi */
+    justify-content: space-between;
+    /* Kartlar arasındaki boşluğu dağıt */
+    gap: 15px;
+    /* Kartlar arasındaki boşluk */
+    width: 100%;
+    /* Container genişliği */
+    box-sizing: border-box;
+    /* Genişlik hesaplamalarında padding'i dahil et */
+}
+
+.input-group-text {
+    background-color: #FDE7BB;
+}
