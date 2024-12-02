@@ -28,3 +28,4 @@
 /Users/aysenuroruccu/Desktop/LibraryManagementSystem/obj/Debug/net8.0/LibraryManagementSystem.pdb
 /Users/aysenuroruccu/Desktop/LibraryManagementSystem/obj/Debug/net8.0/LibraryManagementSystem.genruntimeconfig.cache
 /Users/aysenuroruccu/Desktop/LibraryManagementSystem/obj/Debug/net8.0/ref/LibraryManagementSystem.dll
+/Users/aysenuroruccu/Desktop/LibraryManagementSystem/obj/Debug/net8.0/LibraryManagementSystem.sourcelink.json
