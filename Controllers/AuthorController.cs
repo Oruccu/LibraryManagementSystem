@@ -22,6 +22,23 @@ public class AuthorController : Controller
         return View(dataAuthor);
     }
 
+    public IActionResult Details(int id){
+        Author? author = DataAuthor.Authors.FirstOrDefault(a => a.Id == id);
+        if (author == null){
+            return NotFound();
+        }
+        var biography = DataAuthorBiography.AuthorBiographies.FirstOrDefault(a => a.AuthorId == author.Id);
+
+        AuthorDetails vm = new AuthorDetails(){
+            Id = author.Id,
+            FirstName = author.FirstName,
+            LastName = author.LastName,
+            DateOfBirth = author.DateOfBirth,
+            Biography = biography.Biography,
+        };
+        return View(vm);
+    }
+
     //-----------------------------------New Author Create----------------------------------
     public IActionResult AuthorCreate()
     {

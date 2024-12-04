@@ -21,3 +21,12 @@ html {
 body {
   margin-bottom: 100px;
 }
+
+.background-image {
+  background-image: url('../assets/book2.jpg'); /* Resminizin yolu */
+  background-size: contain; /* Resmi tam ekran kaplamak için */
+
+  background-repeat: no-repeat; /* Resmi tekrarlamamak için */
+  height: auto; /* Bölümün yüksekliği tam ekran */
+  width: auto; /* Genişlik tam ekran */
+}

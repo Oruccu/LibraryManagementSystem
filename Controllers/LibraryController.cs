@@ -16,7 +16,27 @@ public class LibraryController : Controller
 
         return View(viewModel);
     }
-
+    //------------------Details------------------------
+    public IActionResult Details(int id)
+    {
+        Book? book = DataBook.Books.FirstOrDefault(b => b.Id == id);
+        if (book == null)
+        {
+            return NotFound();
+        }
+        var author = DataAuthor.Authors?.FirstOrDefault(a =>a.Id == book.AuthorId);
+        BookDetails vm = new BookDetails()
+        {
+            Id = book.Id,
+            Title = book.Title,
+            AuthorName = $"{author.FirstName} {author.LastName}",
+            Genre = book.Genre,
+            PublishDate = book.PublishDate,
+            ISBN = book.ISBN,
+            CopiesAvailable = book.CopiesAvailable
+        };
+        return View(vm);
+    }
     //---------New Author Create-----------
     public IActionResult AuthorCreate()
     {
@@ -124,7 +144,7 @@ public class LibraryController : Controller
             Genre = book.Genre,
             PublishDate = book.PublishDate,
             ISBN = book.ISBN,
-            CopiesAvailable =book.CopiesAvailable,
+            CopiesAvailable = book.CopiesAvailable,
         };
         ViewBag.Authors = new SelectList(DataAuthor.Authors, "Id", "FirstName");
         return View(vm);

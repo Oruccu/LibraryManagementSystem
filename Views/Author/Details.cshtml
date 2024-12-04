@@ -1,0 +1,17 @@
+@model AuthorDetails
+
+<div style="margin-top: 0rem;">
+    <!-- Başlık bölümü -->
+    <div style="background-color: #257180; text-align: center; padding: 20px; border-radius: 10px; ">
+        <h2 style="color: aliceblue; font-size: 2em;">@Model.FirstName @Model.LastName</h2>
+    </div>
+
+    <!-- Biyografi bölümü -->
+    <div style="margin: 20px; padding: 20px; border: 2px solid #257180; border-radius: 10px; background-color: #f9f9f9;">
+        <p style="font-size: 1.2em; line-height: 1.5;">@Model.Biography</p>
+
+        <div style="top: 10px; right: 10px" >
+            <a asp-action="Index" style="color: #257180; text-decoration: none; font-weight: bold; font-size: x-large;">Geri</a>
+        </div>
+    </div>
+</div>

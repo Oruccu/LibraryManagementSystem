@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets/assets/authorindex.png"
     },
     {
+      "Id": "/Users/aysenuroruccu/Desktop/LibraryManagementSystem/wwwroot/assets/book.png",
+      "PackagePath": "staticwebassets/assets/book.png"
+    },
+    {
+      "Id": "/Users/aysenuroruccu/Desktop/LibraryManagementSystem/wwwroot/assets/book2.jpg",
+      "PackagePath": "staticwebassets/assets/book2.jpg"
+    },
+    {
       "Id": "/Users/aysenuroruccu/Desktop/LibraryManagementSystem/wwwroot/assets/deleteb.png",
       "PackagePath": "staticwebassets/assets/deleteb.png"
     },

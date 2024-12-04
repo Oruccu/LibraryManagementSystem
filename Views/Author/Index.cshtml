@@ -40,13 +40,23 @@
             <td>@author.DateOfBirth.ToShortDateString()</td>
             <td>@author.BookCount</td>
             <td>
-              <a asp-action="Update" asp-route-id="@author.Id" data-bs-target="#exampleModal">
-                <i class="bi bi-pencil-fill" style="color:gray; font-size: 1.5rem; "></i>
-              </a>
-
-              <a asp-action="DeleteCheck" asp-route-id="@author.Id">
-                <i class="bi bi-trash" style="color:#C96868; font-size: 1.5rem; "></i>
-              </a>
+              <div class="row">
+                <div class="col-4">
+                  <a asp-action="Details" asp-route-id="@author.Id" data-bs-target="#exampleModal">
+                    <i class="bi bi-list" style="color:gray; font-size: 1.5rem;"></i>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a asp-action="Update" asp-route-id="@author.Id" data-bs-target="#exampleModal">
+                    <i class="bi bi-pencil-fill" style="color:gray; font-size: 1.5rem;"></i>
+                  </a>
+                </div>
+                <div class="col-4">
+                  <a asp-action="DeleteCheck" asp-route-id="@author.Id">
+                    <i class="bi bi-trash" style="color:#C96868; font-size: 1.5rem;"></i>
+                  </a>
+                </div>
+              </div>
             </td>
           </tr>
         }

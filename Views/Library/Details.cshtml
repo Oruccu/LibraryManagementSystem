@@ -1,0 +1,48 @@
+@model BookDetails
+<div class="row vh-100 ">
+    <!-- Sol Sütun -->
+    <div class="col-md-6 d-8 align-items-center justify-content-center background-image">
+        <div class="text-center" style="margin-top: 30%;">
+            <h3>@Model.Title</h3>
+            <div style="margin-top: 4em;">
+                <p>Yazar</p>
+                <p>@Model.AuthorName</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sağ Sütun -->
+    <div class="col-md-6 align-items-center" style="margin-top: 10%;">
+        <div class="container">
+            <h4>Kitap Bilgileri</h4>
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>Tür</th>
+                        <td>@Model.Genre</td>
+                    </tr>
+                    <tr>
+                        <th>Yayın Tarihi</th>
+                        <td>@Model.PublishDate.ToLongDateString()</td>
+                    </tr>
+                    <tr>
+                        <th>ISBN</th>
+                        <td>@Model.ISBN</td>
+                    </tr>
+                    <tr>
+                        <th>Mevcut Kopyalar</th>
+                        <td>@Model.CopiesAvailable</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="mt-4">
+                <a asp-action="Index" class="btn" style="background-color: lightcoral; color: aliceblue; ">Geri Dön</a>
+                <a asp-action="Update" asp-route-id="@Model.Id" class="btn"
+                    style=" background-color: #257180; color: aliceblue; ">Düzenle</a>
+                <a asp-action="DeleteCheck" asp-route-id="@Model.Id" class="btn"
+                    style="background-color: #C96868; color: aliceblue; ">Sil</a>
+            </div>
+        </div>
+    </div>
+</div>

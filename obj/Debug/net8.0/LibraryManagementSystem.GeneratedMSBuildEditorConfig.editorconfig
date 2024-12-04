@@ -26,6 +26,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yL0RlbGV0ZUNoZWNrLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/aysenuroruccu/Desktop/LibraryManagementSystem/Views/Author/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/aysenuroruccu/Desktop/LibraryManagementSystem/Views/Author/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXV0aG9yL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +56,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/aysenuroruccu/Desktop/LibraryManagementSystem/Views/Library/DeleteCheck.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlicmFyeS9EZWxldGVDaGVjay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/aysenuroruccu/Desktop/LibraryManagementSystem/Views/Library/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGlicmFyeS9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/aysenuroruccu/Desktop/LibraryManagementSystem/Views/Library/Index.cshtml]
