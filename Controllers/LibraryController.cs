@@ -53,7 +53,7 @@ public class LibraryController : Controller
                 Id = DataAuthor.Authors.Max(a => a.Id) + 1,
                 FirstName = newAuthor.Name,
                 LastName = newAuthor.LastName,
-                DateOfBirth = newAuthor.DateOfBirth
+                DateOfBirth = newAuthor.DateOfBirth.Value
             };
             DataAuthor.Authors.Add(author);
             return RedirectToAction("Index");
@@ -79,9 +79,9 @@ public class LibraryController : Controller
                 Title = newBook.Title,
                 AuthorId = newBook.AuthorId,
                 Genre = newBook.Genre,
-                PublishDate = newBook.PublishDate,
+                PublishDate = newBook.PublishDate.Value,
                 ISBN = newBook.ISBN,
-                CopiesAvailable = newBook.CopiesAvailable
+                CopiesAvailable = newBook.CopiesAvailable.Value
             };
             DataBook.Books.Add(book);
             return RedirectToAction("Index");

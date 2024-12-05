@@ -56,7 +56,7 @@ public class AuthorController : Controller
                 Id = DataAuthor.Authors?.Max(a => a.Id) + 1 ?? 1, // Yeni ID oluştur
                 FirstName = newAuthor.Name,
                 LastName = newAuthor.LastName,
-                DateOfBirth = newAuthor.DateOfBirth
+                DateOfBirth = newAuthor.DateOfBirth.Value
             };
             DataAuthor.Authors.Add(author);
             return RedirectToAction("Index");
@@ -134,7 +134,7 @@ public class AuthorController : Controller
         if(ModelState.IsValid){
             author.FirstName = vm.Name;
             author.LastName = vm.LastName;
-            author.DateOfBirth = vm.DateOfBirth;
+            author.DateOfBirth = vm.DateOfBirth.Value;
             return RedirectToAction("Index");
         }
         ViewBag.Authors = new SelectList(DataAuthor.Authors, "Id", "Name");

@@ -16,7 +16,7 @@ namespace LibraryManagementSystem.Models
 
         [Display(Name = "Yazarın Doğum Tarihi")]
         [Required(ErrorMessage = "Yazarın Doğum Tarihi alanı zorunludur.")]
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
 
     }
 }
